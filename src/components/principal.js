@@ -33,7 +33,6 @@ const Principal = () => {
       console.error('Error al dibujar la imagen de máscara:', error);
     }
   };
-  
 
   const changeMask = () => {
     setMaskIndex((prevIndex) => (prevIndex + 1) % masks.length);
@@ -81,6 +80,16 @@ const Principal = () => {
           width={width}
           height={height}
           onMouseMove={handleMouseMove}
+        />
+        <Text
+          text="Mueve el mouse rápidamente"
+          fontSize={25}
+          fill="#FFFFFF"
+          y={height / 2}
+          align="center"
+          offsetX={-width / 4} // Mitad del ancho del texto
+          offsetY={-24} // Mitad de la altura del texto
+          width={width / 2}
         />
       </Layer>
     </Stage>
