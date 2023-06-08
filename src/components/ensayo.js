@@ -1,7 +1,7 @@
 import React from 'react';
-import './secundaria.css';
+import './ensayo.css';
 
-const Secundaria = () => {
+const Ensayo = () => {
   return (
     <div className="ensayo-view">
       <div className="ensayo-content">
@@ -36,4 +36,4 @@ Thussu, D.K. (2008). News as Entertainment: The Rise of Global Infotainment. SAG
   );
 };
 
-export default Secundaria;
+export default Ensayo;

@@ -3,7 +3,7 @@ import { Stage, Layer, Image, Text } from 'react-konva';
 import useImage from 'use-image';
 import { useNavigate } from 'react-router-dom';
 
-const Principal = () => {
+const Representacion = () => {
   const [image] = useImage('/dasd.jpg');
   const [maskIndex, setMaskIndex] = useState(0);
   const [redirect, setRedirect] = useState(false);
@@ -13,7 +13,11 @@ const Principal = () => {
     '/1.jpg',
     '/2.jpg',
     '/3.jpg',
-    '/4.jpg'
+    '/4.jpg',
+    '/5.jpg',
+    '/6.jpg',
+    '/7.jpg',
+    '/8.jpg'
   ];
 
   const [mask] = useImage(masks[maskIndex]); // Ruta de la imagen de máscara
@@ -27,7 +31,7 @@ const Principal = () => {
       const pos = stage.getPointerPosition();
       const context = e.target.getContext();
       context.globalCompositeOperation = 'source-over';
-      context.drawImage(mask, pos.x - 20, pos.y - 20, 40, 40); // Tamaño y posición de la máscara
+      context.drawImage(mask, pos.x - 20, pos.y - 20, 190, 125); // Tamaño y posición de la máscara
     } catch (error) {
       // Manejar el error aquí
       console.error('Error al dibujar la imagen de máscara:', error);
@@ -58,7 +62,7 @@ const Principal = () => {
 
     const redirectTimer = setTimeout(() => {
       setRedirect(true);
-    }, 20000);
+    }, 15000);
 
     return () => {
       clearInterval(timer);
@@ -68,7 +72,7 @@ const Principal = () => {
 
   useEffect(() => {
     if (redirect) {
-      navigate('/secundaria');
+      navigate('/ensayo');
     }
   }, [redirect, navigate]);
 
@@ -96,4 +100,4 @@ const Principal = () => {
   );
 };
 
-export default Principal;
+export default Representacion;

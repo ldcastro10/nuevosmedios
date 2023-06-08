@@ -1,0 +1,40 @@
+.ensayo-view {
+  background-image: url('../../public/dasd.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ensayo-content {
+  max-width: 600px;
+  text-align: center;
+  color: black; /* Cambiar el color del texto a negro */
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Hacer el fondo semi-transparente */
+}
+
+.ensayo-content h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: black; /* Cambiar el color del título a negro */
+}
+
+.ensayo-content p {
+  text-align: center;
+  margin-bottom: 10px;
+  color: black; /* Cambiar el color del párrafo a negro */
+}
+
+.comenzar-button {
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
